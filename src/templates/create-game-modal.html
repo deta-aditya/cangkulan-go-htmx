@@ -1,0 +1,14 @@
+<div id="create-game-modal" class="modal" hx-get="/home" hx-target="#home" hx-swap="outerHTML" hx-trigger="click target:#create-game-modal">
+  <div class="modal-dialog">
+    <h2 class="modal-dialog-title">Create Game</h2>
+    <form id="create-game-form" hx-post="/home/games">
+      <label for="players"># Players</label>
+      <input type="number" name="players" id="players" value="2" min="2" max="4" />
+      <label for="cards"># Cards</label>
+      <input type="number" name="cards" id="cards" value="7" min="5" max="10" />
+      <div class="control">
+        <button class="btn-main" type="submit">Create!</button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+{{ define "player" }}
+<div class="player" id="player-1">
+  <h1>{{ .Name }}</h1>
+  <div class="player-hand">
+    {{ range .Hands }}
+      {{ template "card" . }}
+    {{ end }}
+    <!-- <div class="card color">
+      10 &hearts;
+    </div>
+    <div class="card down"> -->
+    <!-- </div> -->
+  </div>
+</div>
+{{ end }}

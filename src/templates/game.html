@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+  <title>Game #{{ .Game.ID }}</title>
+  <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="game" class="
+    {{ if (ge .Game.Players 3) }}
+    two-seats
+    {{ else }}
+    one-seat
+    {{ end }}
+  ">
+    {{ if (ge .Game.Players 3) }}
+    <div class="game-seats">
+      {{ if (ge .Game.Players 4) }}
+      <div class="player" id="player-4">
+        <h1>Player 4</h1>
+      </div>
+      {{ end }}
+      <div class="player" id="player-3">
+        <h1>Player 3</h1>
+      </div>
+    </div>
+    {{ end }}
+    <div class="game-table">
+      
+    </div>
+    <div class="game-seats">
+      {{ template "player" (index .Players 1) }}
+      {{ template "player" (index .Players 2) }}
+    </div>
+  </div>
+</body>
+</html>

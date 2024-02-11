@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="assets/styles.css">
+  <title>Cangkulan</title>
+  <script src="https://unpkg.com/htmx.org@1.9.9" integrity="sha384-QFjmbokDn2DjBjq+fM+8LUIVrAgqcNW2s0PjAxHETgRn9l4fvX31ZxDxvwQnyMOX" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div id="home">
+    <h1 class="title">Cangkulan</h1>
+    <div>
+      <button class="btn-main" hx-get="/home/games" hx-target="#home" hx-swap="beforeend">
+        Create Game
+      </button>
+    </div>
+    
+  </div>
+</body>
+</html>
